@@ -1,7 +1,7 @@
 # Phonepe-Pulse-Data-Visualization-and-Exploration
 
 **To check website in My Project**
-Link: [phonepe-plus-project.onrender.com](https://phonepe-plus-project.onrender.com/)
+Link: [phonepe-transaction-insights.streamlit.app](https://phonepe-transaction-insights-uqldsg2o8qxkptzgwlsntu.streamlit.app/)
 
 **Problem Statement**
 
@@ -18,22 +18,17 @@ Retrieve data from the Phonepe Pulse GitHub repository, perform data transformat
 
 **Installation:**
 
-    pip install pandas
-    pip install numpy
-    pip install os
-    pip install mysql.connector
-    pip install git_clone
-    pip install stramlit
+    pip install streamlit pandas plotly scikit-learn numpy
 
 **Import Libraries:**
     
+    import streamlit as st
     import pandas as pd
+    import plotly.express as px
     import numpy as np
+    from sklearn.linear_model import LinearRegression
     import os
     import json
-    import mysql.connector 
-    import streamlit as st
-    import plotly.express as px
 
 **Approach:**
 
