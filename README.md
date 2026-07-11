@@ -1,46 +1,81 @@
-# Phonepe-Pulse-Data-Visualization-and-Exploration
+# PhonePe Pulse Transaction & User Insights Dashboard
 
-**To check website in My Project**
-Link: [phonepe-transaction-insights.streamlit.app](https://phonepe-transaction-insights-uqldsg2o8qxkptzgwlsntu.streamlit.app/)
+An interactive, live geo-visualization and forecasting dashboard for exploring PhonePe Pulse datasets in India (covering 2018–2022). 
 
-**Problem Statement**
+**Check out the live website here:**
+👉 **[phonepe-transaction-insights.streamlit.app](https://phonepe-transaction-insights-t3i3cass9ukdxqvv9xjftm.streamlit.app/)**
 
-Retrieve data from the Phonepe Pulse GitHub repository, perform data transformation and cleansing,insert it into a MySQL database, and develop a live geo-visualization dashboard using Streamlit and Plotly in Python.The dashboard will present the data interactively and aesthetically, featuring a minimum of 10 diverse dropdown optionsfor users to select various facts and figures. The solution aims to be secure, efficient, and user-friendly, offering valuable insights and information about the data within the Phonepe Pulse GitHub repository.
+---
 
-**Technology Stack Used:**
+## 🚀 Key Features
 
-1. Python
-2. MySQL
-3. Streamlit
-4. colab
-5. Github Cloning
-6. Geo Visualisation
+The dashboard is built entirely in Python and features **over 10 interactive filter options** (Year, Quarter, State, Theme, Time Range, Metric types, and District selectors) to query and visualize transaction and user trends:
 
-**Installation:**
+1. **🌐 Transaction Analytics & Geographic Maps**
+   * **State-level Choropleth Map**: Real-time India choropleth map plotting transaction amounts and volumes across states using custom GeoJSON boundaries.
+   * **Category Share**: A dynamic donut chart illustrating transaction distributions (e.g., Peer-to-peer, Merchant payments, Financial services).
+   * **Year-over-Year (YoY) Growth**: Automatic calculation and bar chart comparison of annual growth metrics.
 
-    pip install streamlit pandas plotly scikit-learn numpy
+2. **👥 User & Device Insights**
+   * **User Heatmap**: Dynamic geographic representation of registered users and app opening frequency.
+   * **Mobile Brand Market Share**: Detailed market analytics showing device preferences (Xiaomi, Samsung, Vivo, Oppo, Apple, etc.) per state, year, and quarter.
 
-**Import Libraries:**
-    
-    import streamlit as st
-    import pandas as pd
-    import plotly.express as px
-    import numpy as np
-    from sklearn.linear_model import LinearRegression
-    import os
-    import json
+3. **🔮 Machine Learning Trend Forecasting**
+   * Integrates a **Scikit-Learn Linear Regression model** trained on historical multi-quarter ranges that predicts and plots projected transaction counts and values for upcoming quarters.
 
-**Approach:**
+4. **🔍 Regional Pincode & District Deep-Dive**
+   * Detailed drill-down tables and rankings showing the **Top 10 Districts** and **Top 10 Pincodes** based on transaction activity and registered user bases.
 
-1. Data Extraction: The data is obtained from the PhonePe Pulse GitHub repository using scripting techniques and cloned for further processing [(link)](https://github.com/PhonePe/pulse.git).
+5. **🎨 Premium Aesthetic Themes**
+   * Choose from four customized styling themes in the sidebar:
+     * **Default**: Clean slate layout with Light and Dark modes.
+     * **Neon**: High-contrast, dark mode interface with vibrant green/cyan metrics.
+     * **Cyan**: Sleek deep-sea dark layout with bright cyan highlights.
+     * **Sunset**: Warm twilight aesthetic featuring sunset red and purple accents.
 
-2. Data Transformation: Process the cloned data using Python algorithms to transform it into DataFrame format, ensuring it is clean and ready for analysis.
+---
 
-3. Database Integration: The transformed data is inserted into a MySQL database, providing efficient storage and retrieval capabilities.
+## 🛠️ Architecture & Technology Stack
 
-4. Live Geo Visualization Dashboard: Utilizing Python's Streamlit and Plotly libraries, create an interactive and visually appealing dashboard. This real-time dashboard enables users to explore insights effectively.
+The project has been optimized to run **100% database-free** (eliminating MySQL/PostgreSQL dependencies). This allows it to load instantly, run fully offline, and deploy seamlessly to container hosts like Streamlit Cloud or Render.
 
-5. Database Integration with the Dashboard: Fetch relevant data from the MySQL database and seamlessly integrate it into the dashboard, ensuring that the displayed information is up-to-date and accurate.
+* **Core Language:** Python
+* **Data Processing:** Pandas, NumPy
+* **Visualization:** Plotly Express (Interactive charts & maps)
+* **Frontend Framework:** Streamlit (Layout, custom CSS themes, and components)
+* **Machine Learning:** Scikit-Learn (Linear Regression forecasting)
 
-6. Visualization: Finally, create a dashboard using Streamlit, incorporating selection and dropdown options. Showcase the output through Geo visualization, bar charts, and a DataFrame table.
+---
 
+## 📂 Data Pipeline & Extraction
+
+The repository includes a data compiler script [extract_data.py](extract_data.py) that automatically crawls, parses, and cleanses the raw JSON files from the official PhonePe Pulse GitHub repository:
+* **Source Path:** `data/` directory (parsed locally)
+* **Output Path:** Compiles raw data into 7 relation-mapped CSV files loaded by `app.py`.
+
+---
+
+## 💻 Installation & Running Locally
+
+Follow these steps to run the project on your machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/snarkeesbanu-saleem/phonepe-transaction-insights.git
+   cd phonepe-transaction-insights
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Compile the raw data (optional - CSVs are already included for instant use):**
+   ```bash
+   python extract_data.py
+   ```
+
+4. **Launch the Streamlit app:**
+   ```bash
+   python -m streamlit run app.py
+   ```
