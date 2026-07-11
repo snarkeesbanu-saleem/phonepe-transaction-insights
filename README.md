@@ -51,27 +51,27 @@ Retrieve data from the Phonepe Pulse GitHub repository, perform data transformat
 
 **Snapshort**
 
-![image](https://github.com/DineshDhamodharan24/Phonepe-Pulse-Data-Visualization-and-Exploration/assets/142207421/43ce8d59-02a4-4630-9317-169d0bc5bb8e)
+![image](screenshots/Screenshot%202026-03-25%2021.16.14.png)
 
 Top Chart 
 
 - Transactions
 
-![image](https://github.com/DineshDhamodharan24/Phonepe-Pulse-Data-Visualization-and-Exploration/assets/142207421/a846ca0f-2191-441a-a379-18b946d65a07)
+![image](screenshots/Screenshot%202026-03-25%2021.16.56.png)
 
 - User
 
-![image](https://github.com/DineshDhamodharan24/Phonepe-Pulse-Data-Visualization-and-Exploration/assets/142207421/06a28804-decf-4f72-a131-49a5185abadf)
+![image](screenshots/Screenshot%202026-03-25%2021.17.27.png)
 
 Explore Data
 
 - Transactions
 
-![image](https://github.com/DineshDhamodharan24/Phonepe-Pulse-Data-Visualization-and-Exploration/assets/142207421/ea68e067-0372-4410-a130-f332a91b1815)
+![image](screenshots/Screenshot%202026-03-25%2021.18.07.png)
 
 - User
 
-![image](https://github.com/DineshDhamodharan24/Phonepe-Pulse-Data-Visualization-and-Exploration/assets/142207421/932a5458-a707-4fff-8167-54e34332c936)
+![image](screenshots/Screenshot%202026-03-25%2021.18.07.png)
 
 
 
