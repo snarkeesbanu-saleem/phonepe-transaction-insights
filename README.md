@@ -44,30 +44,3 @@ Retrieve data from the Phonepe Pulse GitHub repository, perform data transformat
 
 6. Visualization: Finally, create a dashboard using Streamlit, incorporating selection and dropdown options. Showcase the output through Geo visualization, bar charts, and a DataFrame table.
 
-**Snapshort**
-
-![image](screenshots/Screenshot%202026-03-25%2021.16.14.png)
-
-Top Chart 
-
-- Transactions
-
-![image](screenshots/Screenshot%202026-03-25%2021.16.56.png)
-
-- User
-
-![image](screenshots/Screenshot%202026-03-25%2021.17.27.png)
-
-Explore Data
-
-- Transactions
-
-![image](screenshots/Screenshot%202026-03-25%2021.18.07.png)
-
-- User
-
-![image](screenshots/Screenshot%202026-03-25%2021.18.07.png)
-
-
-
-
